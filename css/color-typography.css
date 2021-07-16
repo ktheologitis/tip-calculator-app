@@ -1,16 +1,16 @@
 @font-face {
   font-family: SpaceMonoBold;
-  src: url(fonts/SpaceMono-Bold.ttf);
+  src: url(../fonts/SpaceMono-Bold.ttf);
 }
 
 @font-face {
   font-family: SpaceMonoBoldIalic;
-  src: url(fonts/SpaceMono-BoldItalic.ttf);
+  src: url(../fonts/SpaceMono-BoldItalic.ttf);
 }
 
 @font-face {
   font-family: SpaceMonoRegular;
-  src: url(fonts/SpaceMono-Regular.ttf);
+  src: url(../fonts/SpaceMono-Regular.ttf);
 }
 
 html,
