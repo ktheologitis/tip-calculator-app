@@ -1,0 +1,24 @@
+.stack {
+  --space: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.stack > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stack > * + * {
+  margin-top: var(--space);
+}
+
+.stack > :nth-child(2) {
+  margin: auto;
+}
+
+.stack:only-child {
+  height: 100%;
+}

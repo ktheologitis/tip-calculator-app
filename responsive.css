@@ -1,0 +1,39 @@
+@media only screen and (min-width: 768px) {
+  .main-card {
+    width: 80%;
+    border-radius: 2rem;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2rem;
+  }
+
+  .inputs-section {
+    height: 100%;
+    width: 55%;
+  }
+
+  .calculation-card {
+    height: 100%;
+    width: 40%;
+  }
+
+  .tip-button {
+    flex: 1 1 25%;
+  }
+
+  .calculation-card {
+    padding: 4rem;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  header {
+    align-items: flex-end;
+  }
+
+  .main-card {
+    width: 60%;
+    height: 60%;
+    border-radius: 2rem;
+  }
+}

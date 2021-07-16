@@ -1,0 +1,92 @@
+@font-face {
+  font-family: SpaceMonoBold;
+  src: url(fonts/SpaceMono-Bold.ttf);
+}
+
+@font-face {
+  font-family: SpaceMonoBoldIalic;
+  src: url(fonts/SpaceMono-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: SpaceMonoRegular;
+  src: url(fonts/SpaceMono-Regular.ttf);
+}
+
+html,
+body {
+  font-size: 10px;
+  background-color: hsl(185, 41%, 84%);
+}
+
+.main-card {
+  background-color: hsl(0, 0%, 100%);
+  height: 100%;
+}
+
+.title {
+  font-family: SpaceMonoRegular;
+  font-size: 2.2rem;
+  letter-spacing: 1rem;
+}
+
+.label {
+  font-family: SpaceMonoBold;
+  font-size: 1.2rem;
+  color: hsl(186, 14%, 43%);
+  caret-color: hsl(183, 100%, 15%);
+}
+
+.input {
+  background-color: hsl(189, 41%, 97%);
+  outline-color: hsl(172, 67%, 45%);
+  font-family: SpaceMonoBold;
+  font-size: 1.6rem;
+  color: hsl(183, 100%, 15%);
+}
+
+.button {
+  font-family: SpaceMonoBold;
+  font-size: medium;
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+}
+
+.button:focus {
+  background-color: hsl(172, 67%, 45%);
+  color: black;
+}
+
+#tip-input {
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(186, 14%, 43%);
+}
+
+#tip-input:hover,
+#tip-input:focus {
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(186, 14%, 43%);
+}
+
+.calculation-card {
+  background-color: hsl(183, 100%, 15%);
+}
+
+.calculation-card-section > .label {
+  color: hsl(185, 41%, 84%);
+}
+
+span {
+  color: hsl(184, 14%, 56%);
+}
+
+.amount {
+  font-family: SpaceMonoBold;
+  font-size: 2.8rem;
+  color: hsl(172, 67%, 45%);
+}
+
+.reset-button {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
