@@ -40,9 +40,26 @@ body {
 .input {
   background-color: hsl(189, 41%, 97%);
   outline-color: hsl(172, 67%, 45%);
+  outline-width: medium;
   font-family: SpaceMonoBold;
   font-size: 1.6rem;
   color: hsl(183, 100%, 15%);
+  text-align: end;
+  border: none;
+}
+
+.valid-input {
+  outline-color: hsl(172, 67%, 45%);
+}
+
+.invalid-input {
+  outline-color: hsl(9, 68%, 58%);
+}
+
+#invalid-message {
+  font-family: SpaceMonoBold;
+  font-size: 1.2rem;
+  color: hsl(9, 68%, 58%);
 }
 
 .button {
@@ -55,17 +72,6 @@ body {
 .button:focus {
   background-color: hsl(172, 67%, 45%);
   color: black;
-}
-
-#tip-input {
-  background-color: hsl(189, 41%, 97%);
-  color: hsl(186, 14%, 43%);
-}
-
-#tip-input:hover,
-#tip-input:focus {
-  background-color: hsl(189, 41%, 97%);
-  color: hsl(186, 14%, 43%);
 }
 
 .calculation-card {
@@ -86,7 +92,11 @@ span {
   color: hsl(172, 67%, 45%);
 }
 
-.reset-button {
+#reset-button {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
+}
+
+#reset-button:disabled {
+  background-color: hsl(183, 78%, 24%);
 }
