@@ -8,6 +8,8 @@ let peopleInputElement = document.getElementById("people-input");
 let invalidInputMessageElement = document.getElementById("invalid-message");
 let tipButtons = document.getElementsByClassName("tip-button");
 let resetButton = document.getElementById("reset-button");
+let tipAmountElement = document.getElementById("tip-amount-per-person");
+let totalAmountElement = document.getElementById("total-amount-per-person");
 
 const getBillAmount = () => {
     let val = billInputElement.value;
@@ -57,8 +59,8 @@ const getNumberOfPeople = () => {
 
 const calculateAmounts = () => {
     if (peopleCount === 0 || isNaN(peopleCount) || isNaN(billAmount)) {
-        document.getElementById("tip-amount-per-person").innerHTML = "$0.00";
-        document.getElementById("total-amount-per-person").innerHTML = "$0.00";
+        tipAmountElement.innerHTML = "$0.00";
+        totalAmountElement.innerHTML = "$0.00";
         return;
     }
     
@@ -69,12 +71,16 @@ const calculateAmounts = () => {
     let tipAmountPerPerson = tipAmount / peopleCount;
     let totalAmountPerPerson = totalAmount / peopleCount;
 
-    document.getElementById("tip-amount-per-person").innerHTML = "$"+tipAmountPerPerson.toFixed(2).toString();
-    document.getElementById("total-amount-per-person").innerHTML = "$"+totalAmountPerPerson.toFixed(2).toString();  
+    tipAmountElement.innerHTML = "$"+tipAmountPerPerson.toFixed(2).toString();
+    totalAmountElement.innerHTML = "$"+totalAmountPerPerson.toFixed(2).toString();  
 }
 
 
 const reset = () => {
+    billAmount = 0;
+    tipPercentage = 0;
+    peopleCount = 0;
+    
     billInputElement.value = 0;
     peopleInputElement.value = 0;
     Object.values(tipButtons).forEach((button) => {
@@ -82,6 +88,8 @@ const reset = () => {
         button.style.color = "white";
     });
     tipInputElement.placeHolder = "Custom";
+    tipAmountElement.innerHTML = "$0.00";
+    totalAmountElement.innerHTML = "$0.00";
 
     resetButton.disabled = "true";
 }
