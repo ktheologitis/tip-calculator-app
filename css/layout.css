@@ -24,6 +24,7 @@ header {
 .main-card {
   padding: 3rem;
   width: 100%;
+  height: 80%;
   border-radius: 2rem 2rem 0 0;
   display: flex;
   flex-direction: column;
