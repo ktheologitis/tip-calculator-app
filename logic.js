@@ -1,6 +1,7 @@
 let billAmount = 0;
 let tipPercentage = 0;
 let peopleCount = 0;
+let selectedButtonId;
 
 let billInputElement = document.getElementById("bill-input");
 let tipInputElement = document.getElementById("tip-input");
@@ -23,6 +24,7 @@ const getPredefinedTip = (val, id) => {
 
     Object.values(tipButtons).forEach((button) => {
         if (button.id == id) {
+            selectedButtonId = id;
             button.style.backgroundColor = "hsl(172, 67%, 45%)";
             button.style.color = "black";
         } else {
@@ -33,9 +35,17 @@ const getPredefinedTip = (val, id) => {
     calculateAmounts();
 }
 
+const resetSelectedButtonStyle = () => {
+    if (selectedButtonId !== undefined) {
+        let selectedButton = document.getElementById(selectedButtonId);
+        selectedButton.style.backgroundColor = "hsl(183, 100%, 15%)";
+        selectedButton.style.color = "white";
+    }
+}
 
 const getCustomTip = () => {
     let val = tipInputElement.value;
+
     tipPercentage = parseFloat(val);
     calculateAmounts();
 }
@@ -81,12 +91,14 @@ const reset = () => {
     tipPercentage = 0;
     peopleCount = 0;
     
-    billInputElement.value = 0;
-    peopleInputElement.value = 0;
-    Object.values(tipButtons).forEach((button) => {
-        button.style.backgroundColor = "hsl(183, 100%, 15%)";
-        button.style.color = "white";
-    });
+    billInputElement.value = null;
+    billInputElement.placeHolder = "0";
+    peopleInputElement.value = null;
+    peopleInputElement.placeHolder = "0"
+
+    resetSelectedButtonStyle();
+
+    tipInputElement.value = null;
     tipInputElement.placeHolder = "Custom";
     tipAmountElement.innerHTML = "$0.00";
     totalAmountElement.innerHTML = "$0.00";
