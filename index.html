@@ -28,7 +28,14 @@
             <button id="button3" class="tip-button button" onclick="getPredefinedTip(15, this.id)">15%</button>
             <button id="button4" class="tip-button button" onclick="getPredefinedTip(20, this.id)">20%</button>
             <button id="button5" class="tip-button button" onclick="getPredefinedTip(50, this.id)">50%</button>
-            <input id="tip-input" class="input" type="text" placeholder="Custom" onmousedown="resetSelectedButtonStyle()" oninput="getCustomTip()" />
+            <input
+              id="tip-input"
+              class="input"
+              type="number"
+              placeholder="Custom"
+              onmousedown="resetSelectedButtonStyle()"
+              oninput="getCustomTip()"
+            />
           </div>
         </div>
         <div class="people-number">
