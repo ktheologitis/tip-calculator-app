@@ -45,8 +45,8 @@ const resetSelectedButtonStyle = () => {
 
 const getCustomTip = () => {
     let val = tipInputElement.value;
-
     tipPercentage = parseFloat(val);
+
     calculateAmounts();
 }
 
@@ -68,7 +68,7 @@ const getNumberOfPeople = () => {
 
 
 const calculateAmounts = () => {
-    if (peopleCount === 0 || isNaN(peopleCount) || isNaN(billAmount)) {
+    if (peopleCount === 0 || isNaN(peopleCount) || isNaN(billAmount) || isNaN(tipPercentage)) {
         tipAmountElement.innerHTML = "$0.00";
         totalAmountElement.innerHTML = "$0.00";
         return;
