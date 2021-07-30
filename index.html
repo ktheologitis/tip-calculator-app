@@ -14,8 +14,8 @@
     <header>
       <h1 class="title">SPLI<br />TTER</h1>
     </header>
-    <div class="main-card">
-      <div class="inputs-section">
+    <main class="main-card">
+      <section class="inputs-section">
         <div class="bill">
           <label class="label" for="bill-input">Bill</label>
           <input id="bill-input" class="input" type="number" oninput="getBillAmount()" placeholder="0" />
@@ -36,7 +36,7 @@
           <label class="label" for="people-input">Number of People</label>
           <input id="people-input" class="input" type="number" placeholder="0" oninput="getNumberOfPeople()" />
         </div>
-      </div>
+      </section>
       <div class="calculation-card stack">
         <div class="calculation-card-section">
           <p class="label">Tip Amount<br /><span>/ person</span></p>
@@ -48,7 +48,7 @@
         </div>
         <button id="reset-button" class="button" onclick="reset()" disabled>RESET</button>
       </div>
-    </div>
+    </main>
     <script src="logic.js"></script>
   </body>
 </html>
