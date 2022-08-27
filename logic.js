@@ -16,7 +16,6 @@ const getBillAmount = () => {
   let val = billInputElement.value;
   billAmount = parseFloat(val);
   calculateAmounts();
-  console.log("hello");
 };
 
 const getPredefinedTip = (val, id) => {
