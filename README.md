@@ -3,7 +3,7 @@
 ![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
 
 ## <ins>Live Demo</ins>
-[Go to demo](https://ktheologitis.github.io/Tip_calculator_app/)
+[Go to demo](https://ktheologitis.github.io/tip-calculator-app/)
 
 ## <ins>Built with</ins>
 - HTML5
